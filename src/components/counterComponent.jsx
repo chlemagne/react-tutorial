@@ -8,15 +8,19 @@ class Counter extends Component {
   render() {
     return (
       <div>
-        <span>{this.formatCount()}</span>
-        <button>Increment</button>
+        <span style={{ fontSize: 10 }} className="badge bg-primary m-2">
+          {this.formatCount()}
+        </span>
+        <button type="button" className="btn btn-secondary btn-sm">
+          Increment
+        </button>
       </div>
     );
   }
 
   formatCount() {
     const { count } = this.state;
-    return count === 0 ? <h1>Zero</h1> : count;
+    return count === 0 ? "Zero" : count;
   }
 }
 
