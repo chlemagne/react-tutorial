@@ -3,6 +3,7 @@ import React, { Component } from "react";
 class Counter extends Component {
   state = {
     count: 0,
+    tags: ["Tag A", "Tag B", "Tag C"],
   };
 
   render() {
@@ -14,8 +15,24 @@ class Counter extends Component {
         <button type="button" className="btn btn-secondary btn-sm">
           Increment
         </button>
+        {this.state.tags.length === 0 && <p>Please create a new tag!</p>}
+        {this.renderTags()}
       </div>
     );
+  }
+
+  renderTags() {
+    if (this.state.tags.length === 0) {
+      return <p>There are no tags!</p>;
+    } else {
+      return (
+        <ul>
+          {this.state.tags.map((tag) => (
+            <li key={tag}>{tag}</li>
+          ))}
+        </ul>
+      );
+    }
   }
 
   getBadgeClasses() {
