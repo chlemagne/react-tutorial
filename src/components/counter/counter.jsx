@@ -9,7 +9,7 @@ class Counter extends Component {
   render() {
     return (
       <div>
-        <span style={{ fontSize: 10 }} className={this.getBadgeClasses()}>
+        <span style={{ fontSize: 15 }} className={this.getBadgeClasses()}>
           {this.formatCount()}
         </span>
         <button
@@ -19,8 +19,6 @@ class Counter extends Component {
         >
           Increment
         </button>
-        {this.state.tags.length === 0 && <p>Please create a new tag!</p>}
-        {this.renderTags()}
       </div>
     );
   }

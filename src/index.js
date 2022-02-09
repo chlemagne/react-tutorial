@@ -3,11 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.css";
-import Movies from "./components/vidly/moviesComponent";
+import Counter from "./components/counter/counter";
 
 ReactDOM.render(
   <main className="container">
-    <Movies />
+    <Counter />
   </main>,
   document.getElementById("root")
 );
