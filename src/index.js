@@ -3,11 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.css";
-import Counter from "./components/counter/counter";
+import Counters from "./components/counter/counters";
 
 ReactDOM.render(
   <main className="container">
-    <Counter />
+    <Counters />
   </main>,
   document.getElementById("root")
 );
